@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AdminHomeContext" prefHeight="690.0" prefWidth="1350.0" style="-fx-background-color: #3498db;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminFormController">
+    <children>
+        <ImageView fitHeight="693.0" fitWidth="1065.0" layoutX="285.0" opacity="0.88" pickOnBounds="true">
+         <image>
+            <Image url="@assets/rw78.jpg" />
+         </image>
+        </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="68.0" layoutY="594.0" onAction="#BackToOnAction" prefHeight="59.0" prefWidth="148.0" style="-fx-background-color: #d83148; -fx-background-radius: 50;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="2.0" layoutY="90.0" prefHeight="122.0" prefWidth="284.0" style="-fx-background-color: #34495e;">
+         <children>
+            <Label layoutX="74.0" layoutY="42.0" prefHeight="31.0" prefWidth="203.0" text="Administrator" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/icons8-user-64.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AdminLoadContext" layoutX="288.0" prefHeight="692.0" prefWidth="1058.0" />
+      <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="276.0" onAction="#ManageItemOnAction" prefHeight="59.0" prefWidth="267.0" style="-fx-background-color: white; -fx-background-radius: 50;" text="Manage Item" textFill="#0c397c">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="375.0" onAction="#SystemReportOnAction" prefHeight="59.0" prefWidth="267.0" style="-fx-background-color: white; -fx-background-radius: 50;" text="System Reports" textFill="#0c397c">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="-2.0" layoutY="2.0" prefHeight="86.0" prefWidth="290.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="14.0" layoutY="7.0" prefHeight="81.0" prefWidth="160.0" text="Cargils" textFill="#f55125">
+               <font>
+                  <Font name="Arial" size="49.0" />
+               </font>
+            </Label>
+            <Label layoutX="174.0" layoutY="45.0" prefHeight="30.0" prefWidth="78.0" text=".pvt" textFill="#f55125">
+               <font>
+                  <Font name="Arial" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

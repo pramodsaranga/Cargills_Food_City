@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MakePaymentContext" prefHeight="692.0" prefWidth="1058.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageOrderFormController">
+   <children>
+      <Label layoutX="21.0" layoutY="53.0" text="Order Id  :" textFill="#4d91cd">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="132.0" layoutY="53.0" text="0001" textFill="#4d91cd">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="460.0" layoutY="53.0" prefHeight="22.0" prefWidth="126.0" text="Order Date   :" textFill="#4d91cd">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="595.0" layoutY="53.0" text="2021-10-25" textFill="#4d91cd">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="846.0" layoutY="53.0" text="Order Time  :" textFill="#4d91cd">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="969.0" layoutY="53.0" text="11.45 a.m" textFill="#4d91cd">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCustomerId" focusColor="WHITE" labelFloat="true" layoutX="21.0" layoutY="89.0" prefHeight="25.0" prefWidth="196.0" promptText="Customer Id" />
+      <JFXTextField fx:id="txtCustomerTitle" editable="false" focusColor="BLUE" labelFloat="true" layoutX="250.0" layoutY="89.0" prefHeight="25.0" prefWidth="176.0" promptText="Customer Title" />
+      <JFXTextField fx:id="txtCustomerName" editable="false" focusColor="BLUE" labelFloat="true" layoutX="452.0" layoutY="89.0" prefHeight="25.0" prefWidth="286.0" promptText="Customer Name" />
+      <JFXTextField fx:id="txtAddress" editable="false" focusColor="BLUE" labelFloat="true" layoutX="758.0" layoutY="89.0" prefHeight="25.0" prefWidth="325.0" promptText="Customer Address" />
+      <JFXTextField fx:id="txtCity" editable="false" focusColor="BLUE" labelFloat="true" layoutX="250.0" layoutY="149.0" prefHeight="25.0" prefWidth="176.0" promptText="City" />
+      <JFXTextField fx:id="txtProvince" editable="false" focusColor="BLUE" labelFloat="true" layoutX="452.0" layoutY="149.0" prefHeight="25.0" prefWidth="286.0" promptText="Province" />
+      <JFXTextField fx:id="txtPostalCode" editable="false" focusColor="BLUE" labelFloat="true" layoutX="758.0" layoutY="149.0" prefHeight="25.0" prefWidth="325.0" promptText="Postal Code" />
+      <JFXComboBox fx:id="cmbItemCode" focusColor="#4562b9" labelFloat="true" layoutX="21.0" layoutY="204.0" prefHeight="25.0" prefWidth="196.0" promptText="Item Code" />
+      <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="245.0" layoutY="204.0" prefHeight="25.0" prefWidth="495.0" promptText="Description" />
+      <JFXTextField fx:id="txtPackSize" editable="false" labelFloat="true" layoutX="761.0" layoutY="204.0" prefHeight="25.0" prefWidth="325.0" promptText="Pack Size" />
+      <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="244.0" layoutY="264.0" prefHeight="25.0" prefWidth="188.0" promptText="Unit Price" />
+      <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="460.0" layoutY="264.0" prefHeight="25.0" prefWidth="286.0" promptText="Qty On Hand" />
+      <JFXTextField fx:id="txtQty" labelFloat="true" layoutX="775.0" layoutY="264.0" prefHeight="25.0" prefWidth="95.0" promptText="Qty" style="-fx-background-color: white;" unFocusColor="#3f3434" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="921.0" layoutY="250.0" onAction="#AddToCartOnAction" prefHeight="46.0" prefWidth="141.0" style="-fx-background-color: #1289A7; -fx-background-radius: 50;" text="Add Order" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblCart" layoutX="7.0" layoutY="320.0" prefHeight="312.0" prefWidth="1077.0">
+         <columns>
+            <TableColumn fx:id="colOrderId" prefWidth="139.0" text="Order Id" />
+            <TableColumn fx:id="colItemCode" prefWidth="241.0" text="Item Code" />
+            <TableColumn fx:id="colOrderQty" prefWidth="234.0" text="Order Qty" />
+            <TableColumn fx:id="colDiscount" prefWidth="229.0" text="Discount" />
+            <TableColumn fx:id="colTotal" prefWidth="255.0" text="Total" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="822.0" layoutY="642.0" onAction="#PlaceOrderOnAction" prefHeight="46.0" prefWidth="237.0" style="-fx-background-color: #34495e; -fx-background-radius: 50;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblTotal" layoutX="38.0" layoutY="648.0" prefHeight="34.0" prefWidth="403.0" text="00.00" textFill="#322929">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="54.0" prefWidth="1091.0" style="-fx-background-color: #58B19F;">
+         <children>
+            <Label layoutX="14.0" layoutY="5.0" prefHeight="46.0" prefWidth="262.0" text="Order Manage" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville Old Face" size="39.0" />
+               </font>
+            </Label>
+            <Separator layoutX="298.0" layoutY="30.0" prefHeight="0.0" prefWidth="631.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

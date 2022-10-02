@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="DashBoardContext" prefHeight="690.0" prefWidth="1350.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <ImageView fitHeight="629.0" fitWidth="1049.0" layoutY="61.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/wt87.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="1049.0" layoutY="61.0" prefHeight="629.0" prefWidth="303.0" style="-fx-background-color: #16a085;">
+         <children>
+            <TextField fx:id="txtUsername" layoutX="52.0" layoutY="326.0" onAction="#MovePassword" prefHeight="38.0" prefWidth="238.0" promptText="User Name" style="-fx-background-color: white;" />
+            <JFXButton buttonType="RAISED" layoutX="65.0" layoutY="510.0" onAction="#LoginOnAction" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: #B53471; -fx-background-radius: 50;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="105.0" fitWidth="121.0" layoutX="100.0" layoutY="141.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/user.png" />
+               </image></ImageView>
+            <PasswordField fx:id="txtPassword" layoutX="55.0" layoutY="416.0" prefHeight="38.0" prefWidth="238.0" promptText="Password" />
+            <Label layoutX="104.0" layoutY="38.0" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="37.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="18.0" layoutY="335.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/z5.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="18.0" layoutY="435.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/z4.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="12.0" layoutY="294.0" text="Username" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="386.0" text="Password" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="109.0" layoutY="573.0" text="Or sign up using" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="648.0" layoutY="15.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/z6.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="322.0" layoutY="16.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/email.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="707.0" layoutY="16.0" prefHeight="20.0" prefWidth="400.0" text="+94 912 277 186 / +94 912 277 187 / +94 775 288 999">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="375.0" layoutY="15.0" prefHeight="27.0" prefWidth="230.0" text="info568@cargils.gmail.com">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="147.0" layoutY="219.0" prefHeight="113.0" prefWidth="377.0" text="Cargills" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="96.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="413.0" layoutY="145.0" prefHeight="30.0" prefWidth="280.0" text="W E L C O M E   TO " textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="357.0" layoutY="310.0" prefHeight="113.0" prefWidth="455.0" text="Food city" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="67.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="1213.0" layoutY="9.0" onAction="#openHomeFormOnAction" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #34495e;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="24.0" layoutY="-12.0" prefHeight="81.0" prefWidth="160.0" text="Cargils" textFill="#f55125">
+         <font>
+            <Font name="Arial" size="49.0" />
+         </font>
+      </Label>
+      <Label layoutX="184.0" layoutY="26.0" prefHeight="30.0" prefWidth="78.0" text=".pvt" textFill="#f55125">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
