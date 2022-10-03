@@ -2,7 +2,6 @@ package controller;
 
 import bo.BoFactory;
 import bo.custom.CustomerBO;
-import dao.custom.impl.CustomerDAOImpl;
 import dto.CustomerDTO;
 import entity.Customer;
 import javafx.event.ActionEvent;
